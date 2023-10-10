@@ -1,26 +1,21 @@
 import express from "express";
 import mongoose from "mongoose";
-import cors from "cors";
-import ProductRoute from "./Routes/products.js"
+import ProductRouter from "./Routes/Product.js";
+import UserRouter from "./Routes/User.js";
+import dotenv from "dotenv";
 
+dotenv.config();
+const PORT = 8001;
 const app = express();
 app.use(express.json());
-app.use(cors());
 
-const PORT = 8000;
-const MONGO_URL =  "mongodb://127.0.0.1:27017/Ecommerce-Application";
-
-mongoose.connect(MONGO_URL, { useNewUrlParser: true, useUnifiedTopology: true })
-.then(()=>console.log("Connected to MongoDB"))
+mongoose.connect("mongodb://127.0.0.1:27017/Find_In_Node", {useNewUrlParser: true, useUnifiedTopology: true})
+.then(()=>console.log("MongoDB Connected"))
 .catch((err)=>console.log(err));
 
-mongoose.connection.on("disconnected", ()=>{
-    console.log("MongoDB disconnected");
-})
+mongoose.connection.on("disconnected", ()=>console.log("MongoDB Disconnected"));
 
-app.get("/", (req,res)=>{res.send("This is the port for Ecommerce Web Application")})
+app.use("/api/product", ProductRouter);
+app.use("/api/user", UserRouter);
 
-//Routes 
-app.use("/product", ProductRoute )
-
-app.listen(PORT, ()=>console.log(`Server Running at PORT ${PORT}`));
+app.listen(PORT, ()=>console.log(`Server running at PORT ${PORT}`));
