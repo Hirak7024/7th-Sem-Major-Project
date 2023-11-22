@@ -1,0 +1,232 @@
+@import "../../css-config/mixins.scss";
+
+.ProductPageContainer{
+    display: flex;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10vw;
+    gap: 0 2vw;
+    @include xsm{
+        flex-direction: column;
+    }
+    .loading_text{
+        font-size: 20px;
+        font-weight: 700;
+        position: relative;
+        top: 15rem;
+        @include lg{
+            font-size: 18px;
+        }
+        @include xsm{
+            font-size: 12px;
+        }
+    }
+    .error_text{
+        font-size: 20px;
+        font-weight: 700;
+        position: relative;
+        top: 15rem;
+        @include lg{
+            font-size: 18px;
+        }
+        @include xsm{
+            font-size: 12px;
+        }
+    }
+    .left{
+        flex: 1;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include xsm {
+            padding-top: 10px;
+        }
+        img{
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+    }
+    .right{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        padding-top: 3rem;
+        @include xsm{
+            padding-top: 5px;
+        }
+        .productTitle{
+            font-size: 50px;
+            // font-weight: 700;
+            @include lg{
+                font-size: 40px;
+            }
+            @include md{
+                font-size: 35px;
+            }
+            @include sm{
+                font-size: 25px;
+            }
+            @include xsm{
+                font-size: 20px;
+            }
+        }
+        .productDesc{
+            font-size: 19px;
+            margin-top: 2rem;
+            @include lg{
+                font-size: 16px;
+            }
+            @include md{
+                font-size: 14px;
+            }
+            @include sm{
+                font-size: 11px;
+            }
+            @include xsm{
+                font-size: 9px;
+                margin-top: 5px;
+            }
+        }
+        .productPrice{
+            font-size: 30px;
+            font-weight: 700;
+            margin-top: 2rem;
+            @include lg{
+                font-size: 25px;
+            }
+            @include md{
+                font-size: 22px;
+            }
+            @include sm{
+                font-size: 17px;
+            }
+            @include xsm{
+                font-size: 12px;
+                margin-top: 10px;
+            }
+        }
+        .quantity_container{
+            display: flex;
+            margin-top: 3rem;
+            align-items: center;
+            @include xsm{
+                margin-top: 1.5rem;
+            }
+            .quantity_btn{
+                width: 2.5rem;
+                height: 2.5rem;
+                border: 1px solid black;
+                outline: none;
+                font-size: 20px;
+                cursor: pointer;
+                @include lg{
+                    width: 2rem;
+                    height: 2rem;
+                    font-size: 17px;
+                }
+                @include sm{
+                    width: 1.4rem;
+                    height: 1.4rem;
+                    font-size: 14px;
+                }
+                // @include xsm{
+                //     width: 1rem;
+                //     height: 1rem;
+                //     font-size: 11px;
+                // }
+            }
+            .quantity{
+                width: 3.5rem;
+                height: 2.5rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-top: 1px solid black;
+                border-bottom: 1px solid black;
+                font-size: 20px;
+                @include lg{
+                    width: 3rem;
+                    height: 2rem;
+                    font-size: 17px;
+                }
+                @include sm{
+                    width: 1.8rem;
+                    height: 1.4rem;
+                    font-size: 11px;
+                }
+                // @include xsm{
+                //     width: 1.2rem;
+                //     height: 1rem;
+                // }
+            }
+        }
+        .btn_container{
+            display: flex;
+            gap: 2rem;
+            margin: 1rem 0;
+            @include sm{
+                gap: 1rem;
+            }
+            .addToCart, .wishlist{
+                width: 12rem;
+                height: 3rem;
+                display: flex;
+                gap: 3px;
+                justify-content: center;
+                align-items: center;
+                font-size: 18px;
+                cursor: pointer;
+                @include lg{
+                    width: 10rem;
+                    height: 2.5rem;
+                    font-size: 16px;
+                    gap: 4px;
+                }
+                @include md{
+                    width: 8rem;
+                    font-size: 14px;
+                    height: 2.3rem;
+                }
+                @include sm{
+                    width: 7rem;
+                    font-size: 11px;
+                    height: 2rem;
+                }
+                @include xsm{
+                    width: 6rem;
+                    height: 1.7rem;
+                    font-size: 9px;
+                }
+                .icon{
+                    width: 2vw;
+                    height: 3.5vh;
+                    @include xsm{
+                        width: 3vw;
+                        height: 4vh;
+                    }
+                }
+            }
+        }
+        .division_line{
+            margin-bottom: 1rem;
+        }
+        .labels{
+            font-size: 19px;
+            @include lg{
+                font-size: 16px;
+            }
+            @include md{
+                font-size: 14px;
+            }
+            @include sm{
+                font-size: 11px;
+            }
+            @include xsm{
+                font-size: 9px;
+            }
+        }
+    }
+}

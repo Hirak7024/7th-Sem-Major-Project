@@ -1,0 +1,48 @@
+@import "../../css-config/mixins.scss";
+
+.app_container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    .productCards_Container{
+        .loading_text{
+            font-size: 17px;
+            font-weight: 600;
+            @include xsm{
+              font-size: 8px;
+            }
+        }
+        .error_text{
+            font-size: 17px;
+            font-weight: 600;
+            @include xsm{
+              font-size: 8px;
+            }
+        }
+      .paginated_products{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+        .app_products{
+          width: 100%;
+        //   padding: 0 2vw;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 5vh 3vw;
+          .card_To_Product_Link{
+            text-decoration: none;
+            color: black;
+        }
+        .no_prouct{
+          font-size: 25px;
+        }
+        }
+      }
+    }
+    // .productCards_Container::-webkit-scrollbar{
+    //     width: 0;
+    //   }
+  }

@@ -1,0 +1,109 @@
+@import "../../css-config/mixins.scss";
+
+.Banner_Container {
+    width: 100vw;
+    height: 70vh;
+    display: flex;
+    background-image: radial-gradient(circle farthest-corner at 22.4% 21.7%, rgba(4, 189, 228, 1) 0%, rgba(2, 83, 185, 1) 100.2%);
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 30vw;
+    padding-left: 12vw;
+    @include md{
+        padding-left: 10vw;
+        padding-right: 25vw;
+    }
+    @include xsm{
+        padding-left: 5vw;
+        padding-right: 24vw;
+        height: 40vh;
+    }
+
+    .left {
+        display: flex;
+        flex-direction: column;
+        h1 {
+            font-size: 80px;
+            color: white;
+            font-weight: 700;
+            @include lg{
+                font-size: 55px;
+            }
+            @include md{
+                font-size: 45px;
+            }
+            @include sm{
+                font-size: 35px;
+            }
+            @include xsm{
+                font-size: 33px;
+            }
+        }
+
+        h2 {
+            font-size: 30px;
+            color: white;
+            margin-top: 1vh;
+            @include lg{
+                font-size: 21px;
+            }
+            @include md{
+                font-size: 16px;
+            }
+            @include sm{
+                font-size: 13px;
+            }
+            @include xsm{
+                font-size: 12px;
+            }
+        }
+
+        h3 {
+            font-size: 20px;
+            color: rgb(255, 234, 0);
+            margin-top: 1vh;
+            @include lg{
+                font-size: 14px;
+            }
+            @include md{
+                font-size: 10px;
+            }
+            @include sm{
+                font-size: 9px;
+            }
+            @include xsm{
+                font-size: 8px;
+            }
+        }
+    }
+
+    .right {
+        display: flex;
+        position: relative;
+        img{
+            width: 20vw;
+            height: auto;
+            object-fit: contain;
+           
+            @include md{
+                width: 30vw;
+            }
+        }
+        #img2{
+            position: absolute;
+            left: 10vw;
+            top: 1.5vw;
+            @include md{
+                left: 16vw;
+            }
+        }
+        #img3{
+            position: absolute;
+            left: 18vw;
+            @include md{
+                left: 25vw;
+            }
+        }
+
+    }
+}

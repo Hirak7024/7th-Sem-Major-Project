@@ -1,0 +1,48 @@
+@import "../../css-config/mixins.scss";
+
+.WishListPage_Container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    padding: 5vh 5vw;
+    @include xsm{
+        gap: 1.5rem;
+    }
+    .wishListedProductsHeading{
+        font-size: 40px;
+        @include lg{
+            font-size: 35px;
+        }
+        @include md{
+            font-size: 30px;
+        }
+        @include xsm{
+            font-size: 18px;
+        }
+        
+    }
+    .loading_text{
+        font-size: 20px;
+        font-weight: 700;
+    }
+    .error_text{
+        font-size: 20px;
+        font-weight: 700;
+    }
+    .wishListedProducts_Container{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 4vh 3vw;
+        justify-content: center;
+        .noProducts_head{
+            font-size: 20px;
+        }
+        .card_To_Product_Link{
+            color: black;
+            text-decoration: none;
+       }
+
+    }
+}

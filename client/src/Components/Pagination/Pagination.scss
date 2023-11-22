@@ -1,0 +1,33 @@
+@import "../../css-config/mixins.scss";
+
+.pagination {
+    padding-left: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    width: fit-content;
+  }
+  
+  .pagination button {
+    margin-right: 0.5rem;
+    cursor: pointer;
+    padding: 7px 15px;
+    @include lg{
+      padding: 5px 13px;
+      font-size: 10px;
+    }
+    @include sm{
+      padding: 3px 10px;
+      font-size: 8px;
+    }
+    @include xsm{
+      padding: 2px 5px ;
+      font-size: 7px;
+      margin-right: 5px;
+    }
+  }
+  
+  .pagination button:disabled {
+    background-color: #333;
+    color: #fff;
+    cursor: not-allowed;
+  }

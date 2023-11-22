@@ -1,4 +1,6 @@
-.navbar-container{
+@import "../../css-config/mixins.scss";
+
+.navbar-container {
     display: flex;
     align-items: center;
     width: 100vw;
@@ -7,67 +9,168 @@
     justify-content: space-between;
     background-color: #092143;
     color: white;
-    .left{
+    @include lg{
+        padding: 0 2rem;
+        height: 70px;
+    }
+    @include md{
+        padding: 0 1rem;
+    }
+    @include sm{
+        padding: 0 10px;
+        height: 60px;
+    }
+    .left {
         flex: 1;
-        h1{
+        h1 {
             font-size: 30px;
             font-weight: 500;
             cursor: pointer;
+            @include lg{
+                font-size: 20px;
+            }
+            @include md{
+                font-size: 18px;
+            }
+            @include sm{
+                font-size: 14px;
+            }
+            @include xsm{
+                font-size: 10px;
+            }
         }
     }
-    .middle{
+
+    .middle {
         display: flex;
         align-items: center;
         justify-content: center;
         flex: 6;
-        .searchBox{
+
+        .searchBox {
             display: flex;
             align-items: center;
             background-color: white;
             width: 80%;
-            height: 45px;
+            height: 50px;
             border-radius: 5px;
             padding: 0 7px;
             justify-content: space-between;
-            input{
+            @include lg{
+                height: 43px ;
+            }
+            @include md{
+                height: 37px ;
+            }
+            @include sm{
+                height: 33px;
+            }
+            @include xsm{
+                height: 28px;
+            }
+
+            input {
                 font-size: 18px;
                 padding-left: 10px;
                 outline: none;
                 border: none;
+                width: 100%;
+                @include lg{
+                    font-size: 16px;
+                }
+                @include md{
+                    font-size: 11px;
+                }
+                @include sm{
+                    font-size: 8px;
+                }
             }
-            .searchIcon{
+
+            .searchIcon {
                 width: 70px;
                 height: 35px;
                 padding: 5px 0;
                 color: white;
                 border-radius: 6px;
                 background-color: #f5af35;
+                @include lg{
+                    width: 60px;
+                    height: 33px;
+                }
+                @include md{
+                    width: 40px;
+                    height: 28px;
+                }
+                @include sm {
+                    width: 30px;
+                    height: 25px;
+                }
+                @include xsm{
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 3px;
+                }
             }
-            .searchIcon:hover{
+
+            .searchIcon:hover {
                 cursor: pointer;
                 background-color: #092143;
             }
         }
     }
-    .right{
+
+    .right {
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding-right: 20px;
         flex: 2;
         gap: 10px;
-        .icons{
+        @include lg{
+            padding-right: 0px;
+            gap: 2px;
+        }
+
+        .icons {
             display: flex;
             gap: 15px;
             align-items: center;
-            .icon{
+            @include lg{
+                gap: 7px;
+            }
+            @include md{
+                gap: 3px;
+            }
+
+            .icon {
                 position: relative;
-                .number{
+                .right_icons{
+                    width: 2rem;
+                    height: 2rem;
+                    @include lg{
+                        width: 1.7rem;
+                        height: 1.7rem;
+                    }
+                    @include md{
+                        width: 1.2rem;
+                        height: 1.2rem;
+                    }
+                    @include sm{
+                        width: 1rem ;
+                        height: 1rem;
+                    }
+                    @include xsm{
+                        width: 0.8rem;
+                        height: 0.8rem;
+                    }
+                }
+
+                .number {
                     position: absolute;
                     top: -13%;
-                    right: -40%;
-                    width: 15px;
-                    height: 15px;
+                    right: -10%;
+                    width: 17px;
+                    height: 17px;
                     border-radius: 50%;
                     background-color: #f5af35;
                     font-size: 10px;
@@ -75,14 +178,33 @@
                     align-items: center;
                     justify-content: center;
                     font-weight: 500;
+                    @include md{
+                        width: 15px;
+                        height: 15px;
+                        font-size: 9px;
+                    }
+                    @include sm{
+                        width: 12px;
+                        height: 12px;
+                        font-size: 7px;
+                    }
+                    @include xsm{
+                        width: 9px;
+                        height: 9px;
+                        font-size: 5px;
+                        top: 1%;
+                        right: -25%;
+                    }
                 }
             }
-            .icon :hover{
+
+            .icon :hover {
                 color: #f5af35;
                 cursor: pointer;
             }
         }
-        .login{
+
+        .login {
             background-color: white;
             color: black;
             height: 40px;
@@ -95,19 +217,75 @@
             margin-left: 20px;
             cursor: pointer;
             border: none;
-            p{
+            @include lg{
+                width: 80px;
+                height: 35px;
+                border-radius: 3px;
+                gap: 2px;
+            }
+            @include md{
+                width: 60px;
+                height: 25px;
+                border-radius: 2px;
+                gap: 2px;
+            }
+            @include sm{
+                width: 40px;
+                height: 22px;
+            }
+            @include xsm{
+                width: 30px;
+                height: 20px;
+            }
+            .right_icons{
+                width: 1.5rem;
+                height: 1.5rem;
+                @include lg{
+                    width: 1.2rem;
+                    height: 1.2rem;
+                }
+                @include md{
+                    width: 0.7rem;
+                    height: 0.7rem;
+                }
+                @include sm{
+                    width: 0.5rem;
+                    height: 0.5rem;
+                }
+                @include xsm{
+                    width: 0.4rem;
+                    height: 0.4rem;
+                }
+            }
+
+            p {
                 font-size: 16px;
                 font-weight: 700;
+                @include lg{
+                    font-size: 14px;
+                }
+                @include md{
+                    font-size: 10px;
+                }
+                @include sm{
+                    font-size: 7px;
+                }
+                @include xsm{
+                    font-size: 6px;
+                }
             }
         }
-        .login:hover{
+
+        .login:hover {
             background-color: #f5af35;
             color: white;
-            p{
+
+            p {
                 font-weight: 500;
             }
         }
-        .login2{
+
+        .login2 {
             width: 80px;
             height: 40px;
             background-color: white;
@@ -120,12 +298,54 @@
             font-size: 16px;
             font-weight: 700;
             border: none;
+            @include lg{
+                width: 70px;
+                height: 35px;
+                font-size: 14px;
+                margin-left: 0;
+                border-radius: 3px;
+            }
+            @include lg{
+                width: 50px;
+                height: 25px;
+                border-radius: 2px;
+                font-size: 10px;
+            }
+            @include sm{
+                width: 40px;
+                height: 22px;
+                border-radius: 2px;
+                font-size: 8px;
+            }
+            @include xsm{
+                width: 30px;
+                height: 20px;
+                font-size: 6px;
+            }
         }
-        .login2:hover{
+
+        .login2:hover {
             cursor: pointer;
             background-color: #f5af35;
             color: white;
             font-weight: 500;
         }
+    }
+
+    &.sticky_navbar {
+        position: sticky;
+        top: 0;
+        transform: translateY(-100px);
+        animation: stickyHeader 0.3s ease forwards;
+        z-index: 500;
+        // because of adding 'forwards' the animation stops at the last key frame.
+    }
+}
+@keyframes stickyHeader {
+    0%{
+        transform: translateY(-80px);
+    }
+    100%{
+        transform: translateY(0);
     }
 }

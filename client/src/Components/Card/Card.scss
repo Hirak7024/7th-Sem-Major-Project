@@ -1,0 +1,126 @@
+@import "../../css-config/mixins.scss";
+
+.card_container{
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    width: 17rem;
+    height: fit-content;
+    padding: 3vh 1.5vw;
+    border-radius: 5px;
+    position: relative;
+    transition-property: all;
+    transition-duration: 0.3s;
+    background-color: white;
+    @include lg{
+      width: 16rem;
+    }
+    @include md{
+      width: 14rem;
+    }
+    @include sm{
+      width: 11rem;
+    }
+    @include xsm{
+      width: 8rem;
+    }
+    cursor: pointer;
+    .like_icon{
+        width: 2rem;
+        height: 2rem;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        transition-property: all;
+        transition-duration: 0.3s;
+        @include lg{
+          width: 1.8rem;
+          height: 1.8rem;
+        }
+        @include sm{
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+        @include xsm{
+          width: 1.2rem;
+          height: 1.2rem;
+        }
+    }
+    .like_icon:hover{
+        transform: scale(1.2);
+    }
+    .colored{
+        color: red;
+        // border: none;
+    }
+    .productImg_Container{
+      width: 100%;
+      height: 14rem;
+      @include lg{
+        height: 13rem;
+      }
+      @include sm{
+        height: 9rem;
+      }
+      @include xsm{
+        height: 6rem;
+      }
+      .product_img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+    .product_title{
+      font-size: 25px;
+      font-weight: 700;
+      margin-top: 15px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      @include lg{
+        font-size: 20px;
+      }
+      @include sm{
+        font-size: 14px;
+      }
+      @include xsm{
+        font-size: 11px;
+        margin-top: 7px;
+      }
+    }
+    .product_desc{
+      font-size: 14px;
+      font-weight: 400;
+      margin: 10px 0;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      @include lg{
+        font-size: 12px;
+      }
+      @include sm{
+        font-size: 10px;
+      }
+      @include xsm{
+        font-size: 7px;
+        margin: 5px 0;
+      }
+    }
+    .product_price{
+      font-size: 18px;
+      font-weight: 500;
+      @include lg{
+        font-size: 16px;
+      }
+      @include sm{
+        font-size: 12px;
+      }
+      @include xsm{
+        font-size: 8px;
+      }
+    }
+  }
+  .card_container:hover{
+    transform: scale(1.05);
+  }

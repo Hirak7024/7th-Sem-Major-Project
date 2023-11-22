@@ -1,0 +1,105 @@
+@import "../../css-config/mixins.scss";
+
+.CategoryProduct_Container{
+    width: 100vw;
+    display: flex;
+    padding-top: 3rem;
+    .left{
+        width:20vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        padding-left: 2vw;
+        position: fixed;
+        @include lg{
+            gap: 1rem;
+        }
+        .sidebar_categories{
+            display: flex;
+            flex-direction: column;
+            .select_categories_heading{
+                font-size: 20px;
+                margin-bottom: 7px;
+                @include lg{
+                    font-size: 17px;
+                }
+                @include md{
+                    font-size: 15px;
+                }
+                @include sm{
+                    font-size: 10px;
+                }
+                @include xsm{
+                    font-size: 7px;
+                }
+            }
+            .sidebar_label{
+                margin-bottom: 5px;
+                display: flex;
+                gap: 3px;
+                align-items: center;
+                cursor: pointer;
+                .sidebar_input{
+                    cursor: pointer;
+                    @include sm{
+                        width: 7px;
+                        height: 7px;
+                    }
+                    @include xsm{
+                        width: 5px;
+                        height: 5px;
+                    }
+                }
+                .checkmark{
+                    font-size: 16px;
+                    font-weight: 500;
+                    @include lg{
+                        font-size: 14px;
+                    }
+                    @include md{
+                        font-size: 13px;
+                    }
+                    @include sm{
+                        font-size: 9px;
+                    }
+                    @include xsm{
+                        font-size: 6px;
+                    }
+                }
+            }
+        }
+    }
+    .right{
+        width: 80vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+        position: relative;
+        left: 20vw;
+        padding: 0 3vw;
+        @include sm{
+            gap: 1rem;
+        }
+        .heading{
+            font-size: 45px;
+            font-weight: 700;
+            @include lg{
+                font-size: 35px;
+            }
+            @include md{
+                font-size: 30px;
+            }
+            @include sm{
+                font-size: 25px;
+            }
+            @include xsm{
+                font-size: 15px;
+            }
+        }
+        .ProductsContainer{
+            width: 100%;
+        }
+    }
+    }
