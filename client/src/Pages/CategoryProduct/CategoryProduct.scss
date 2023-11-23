@@ -22,13 +22,13 @@
                 font-size: 20px;
                 margin-bottom: 7px;
                 @include lg{
-                    font-size: 17px;
+                    font-size: 16px;
                 }
                 @include md{
-                    font-size: 15px;
+                    font-size: 13px;
                 }
                 @include sm{
-                    font-size: 10px;
+                    font-size: 9px;
                 }
                 @include xsm{
                     font-size: 7px;
@@ -58,10 +58,10 @@
                         font-size: 14px;
                     }
                     @include md{
-                        font-size: 13px;
+                        font-size: 11px;
                     }
                     @include sm{
-                        font-size: 9px;
+                        font-size: 8px;
                     }
                     @include xsm{
                         font-size: 6px;
