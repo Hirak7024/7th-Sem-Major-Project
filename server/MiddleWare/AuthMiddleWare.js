@@ -17,7 +17,7 @@ const authMiddleWare = async (req, res, next) => {
     }
 
     const decoded = jwt.verify(token, secret);
-    req.body._id = decoded?.id;
+    req.body._id = decoded?._id;
     next();
   } catch (error) {
     console.log(error);

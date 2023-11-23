@@ -26,7 +26,7 @@ export default function Navbar() {
     const handleLogout = () => {
         localStorage.removeItem("authToken");
         navigate("/");
-        setWishListedProducts([])
+        setWishListedProducts([]);
         setIsLoggedIn(false);
         setUserData({});
         toast.success("Logged Out")

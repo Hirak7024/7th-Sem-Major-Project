@@ -11,6 +11,6 @@ router.delete("/delete/:id", deleteProduct);
 router.get("/getProducts", getProducts);
 router.get("/products/bestSelling", getBestSellingProducts);
 router.post("/addProducts/toWishlist", authMiddleWare, addProductsToWishlist);
-router.post("/getProducts/wishlisted", getWishlistedProducts);
+router.post("/getProducts/wishlisted",getWishlistedProducts);
 
 export default router;
